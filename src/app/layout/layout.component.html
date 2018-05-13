@@ -1,5 +1,21 @@
-<app-topbar></app-topbar>
-<div>
-  <app-leftbar></app-leftbar>
-  <router-outlet></router-outlet>
-</div>
+
+<nz-layout class="layout">
+  <nz-header>
+    <app-topbar></app-topbar>
+  </nz-header>
+  <nz-layout>
+    <nz-sider [nzWidth]="200" style="background:#fff">
+      <app-leftbar></app-leftbar>
+    </nz-sider>
+    <nz-layout style="padding:0 24px 24px">
+      <nz-breadcrumb style="margin:12px 0;">
+        <nz-breadcrumb-item>Home</nz-breadcrumb-item>
+        <nz-breadcrumb-item>List</nz-breadcrumb-item>
+        <nz-breadcrumb-item>App</nz-breadcrumb-item>
+      </nz-breadcrumb>
+      <nz-content style="background:#fff; padding: 24px; min-height: 280px;">
+        <router-outlet></router-outlet>
+      </nz-content>
+    </nz-layout>
+  </nz-layout>
+</nz-layout>

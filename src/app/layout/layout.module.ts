@@ -4,13 +4,15 @@ import { TopbarComponent } from './topbar/topbar.component';
 import { LeftbarComponent } from './leftbar/leftbar.component';
 import { LayoutComponent } from './layout.component';
 import { RouterModule } from '@angular/router';
+import { NgZorroAntdModule } from 'ng-zorro-antd';
 
 import { LayoutRoutes } from './layout.routes';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(LayoutRoutes)
+    RouterModule.forChild(LayoutRoutes),
+    NgZorroAntdModule.forRoot(),
   ],
   declarations: [TopbarComponent, LeftbarComponent, LayoutComponent]
 })
