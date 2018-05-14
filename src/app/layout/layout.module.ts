@@ -12,7 +12,7 @@ import { LayoutRoutes } from './layout.routes';
   imports: [
     CommonModule,
     RouterModule.forChild(LayoutRoutes),
-    NgZorroAntdModule.forRoot(),
+    NgZorroAntdModule.forRoot()
   ],
   declarations: [TopbarComponent, LeftbarComponent, LayoutComponent]
 })
