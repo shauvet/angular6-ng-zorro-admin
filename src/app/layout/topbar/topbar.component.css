@@ -15,6 +15,6 @@
 }
 :host .user {
   position: absolute;
-  top: 12px;
+  top: 0;
   right: 1rem;
 }
