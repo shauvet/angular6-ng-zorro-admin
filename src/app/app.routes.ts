@@ -1,10 +1,10 @@
 import { LoginComponent } from './components/login/login.component';
-
+import { AuthGuard } from './shared/auth/auth-guard';
 
 export const appRoutes = [
   {
     path: '',
-    redirectTo: 'workspace',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -13,6 +13,7 @@ export const appRoutes = [
   },
   {
     path: 'workspace',
-    loadChildren: './layout/layout.module#LayoutModule'
+    loadChildren: './layout/layout.module#LayoutModule',
+    canLoad: [AuthGuard]
   }
 ];

@@ -8,6 +8,8 @@ import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { appRoutes } from './app.routes';
+import { AuthGuard } from './shared/auth/auth-guard';
+import { AuthService } from './shared/auth/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { appRoutes } from './app.routes';
     NgZorroAntdModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [AuthGuard, AuthService]
 })
 export class AppModule { }
